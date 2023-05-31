@@ -88,12 +88,12 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">SAVE: Spectral-Shift-Aware Adaptation of Image Diffusion Models for Text-guided Video Editing</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://umarkhalid.com">Umar Khalid</a><sup>2</sup>,</span>
             <span class="author-block">
               <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
             </span>
@@ -183,9 +183,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        <span class="dnerf">SAVE</span> edits your videos efficiently based on the user prompt
       </h2>
     </div>
   </div>
@@ -262,33 +260,33 @@
             deforming scene using photos/videos captured casually from mobile phones.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+           Text-to-Image (T2I) diffusion models have achieved remarkable success in syn-
+thesizing high-quality images conditioned on text prompts. Recent methods have
+tried to replicate the success by either training text-to-video (T2V) models on a
+very large number of text-video pairs or adapting T2I models on text-video pairs
+independently. Although the latter is computationally less expensive, it still takes a
+significant amount of time for per-video adaption. To address this issue, we propose
+SAVE, a novel spectral-shift-aware adaptation framework, in which we fine-tune
+the spectral shift of the parameter space instead of the parameters themselves.
+Specifically, we take the spectral decomposition of the pre-trained T2I weights and
+only control the change in the corresponding singular values, i.e. spectral shift,
+while freezing the corresponding singular vectors. To avoid drastic drift from the
+original T2I weights, we introduce a spectral shift regularizer that confines the spec-
+tral shift to be more restricted for large singular values and more relaxed for small
+singular values. Since we are only dealing with spectral shifts, the proposed method
+reduces the adaptation time significantly (∼ 10×) and has fewer resource con-
+straints for training. Such attributes posit SAVE to be more suitable for real-world
+applications, e.g. editing undesirable contents during video streaming. We validate
+the effectiveness of SAVE with an extensive experimental evaluation under different
+settings, e.g. style transfer, object replacement, privacy preservation, etc. Code is
+available at <a href="https://github.com/nazmul-karim170/SAVE-Tex2Video">GitHub Codel</a>
+
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
-
+<!-- 
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -408,7 +406,7 @@
       </div>
     </div>
     <!--/ Animation. -->
-
+ -->
 
     <!-- Concurrent Work. -->
     <div class="columns is-centered">

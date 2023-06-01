@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Video-P2P: Video Editing with Cross-attention Control</title>
+  <title>SAVE: Spectral-Shift-Aware Adaptation of Image Diffusion Models for Text-guided Video Editing</title>
   <link href="https://fonts.googleapis.com/css?family=Noto Serif" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -31,27 +31,6 @@
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <!-- <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://julianjuaner.github.io/">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="">
-            Ref-NPR
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div> -->
   </nav>
 
 
@@ -64,31 +43,30 @@
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://www.shaotengliu.com/" target="_blank">Shaoteng Liu</a><sup>1</sup>,</span>
+                <a href="https://www.shaotengliu.com/" target="_blank">Nazmul Karim</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="https://julianjuaner.github.io/" target="_blank">Yuechen Zhang</a><sup>1</sup>,</span>
+                <a href="https://www.umarkhalid.com/" target="_blank">Umar Khalid</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="https://fenglinglwb.github.io/" target="_blank">Wenbo Li</a><sup>1</sup>,
+                <a href="https://fenglinglwb.github.io/" target="_blank">Mohsen Joneidi</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://sites.google.com/site/zhelin625/" target="_blank">Zhe Lin</a><sup>3</sup>,
+                <a href="https://www.crcv.ucf.edu/chenchen/" target="_blank">Chen Chen</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://jiaya.me/" target="_blank">Jiaya Jia</a><sup>1,2</sup>
+                <a href="https://lcwnlab.eecs.ucf.edu/" target="_blank">Nazanin Rahnavard</a><sup>3</sup>,
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>The Chinese University of Hong Kong,</span>
-              <span class="author-block"><sup>2</sup>SmartMore</span>
-              <span class="author-block"><sup>3</sup>Adobe</span>
+              <span class="author-block"><sup>1</sup>The University of Central Florida,</span>
+
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- Arxiv Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2303.04761" class="external-link button is-normal is-rounded is-dark"
+                  <a href="https://arxiv.org/abs/2305.18670" class="external-link button is-normal is-rounded is-dark"
                     target="_blank">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -98,7 +76,7 @@
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/ShaoTengLiu/Video-P2P" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/nazmul-karim170/SAVE-Text2Video" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -106,23 +84,23 @@
                   </a>
                 </span>
                 <!-- Dataset Link. -->
-                <span class="link-block">
-                  <a href="https://github.com/ShaoTengLiu/Video-P2P#dataset" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="far fa-images"></i>
-                    </span>
-                    <span>Data</span>
-                  </a>
-				        </span>
-                <!-- Demo Link. -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/spaces/video-p2p-library/Video-P2P-Demo" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      🤗
-                    </span>
-                    <span>Demo</span>
-                  </a>
-				        </span>
+<!--                <span class="link-block">-->
+<!--                  <a href="https://github.com/ShaoTengLiu/Video-P2P#dataset" class="external-link button is-normal is-rounded is-dark">-->
+<!--                    <span class="icon">-->
+<!--                      <i class="far fa-images"></i>-->
+<!--                    </span>-->
+<!--                    <span>Data</span>-->
+<!--                  </a>-->
+<!--				        </span>-->
+<!--                &lt;!&ndash; Demo Link. &ndash;&gt;-->
+<!--                <span class="link-block">-->
+<!--                  <a href="https://huggingface.co/spaces/video-p2p-library/Video-P2P-Demo" class="external-link button is-normal is-rounded is-dark">-->
+<!--                    <span class="icon">-->
+<!--                      🤗-->
+<!--                    </span>-->
+<!--                    <span>Demo</span>-->
+<!--                  </a>-->
+<!--				        </span>-->
               </div>
               <!-- <strong>*</strong>: will be released later. -->
             </div>
@@ -206,16 +184,23 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              This paper presents Video-P2P, a novel framework for real-world video editing with cross-attention control.
-              While attention control has proven effective for image editing with pre-trained image generation models, there are currently no large-scale video generation models publicly available.
-              Video-P2P addresses this limitation by adapting an image generation diffusion model to complete various video editing tasks.
-              Specifically, we propose to first tune a Text-to-Set (T2S) model to complete an approximate inversion and then optimize a shared unconditional embedding to achieve accurate video inversion with a small memory cost.
-              For attention control, we introduce a novel decoupled-guidance strategy, which uses different guidance strategies for the source and target prompts.
-              The optimized unconditional embedding for the source prompt improves reconstruction ability, while an initialized unconditional embedding for the target prompt enhances editability.
-              Incorporating the attention maps of these two branches enables detailed editing.
-              These technical designs enable various text-driven editing applications, including word swap, prompt refinement, and attention re-weighting.
-              Video-P2P works well on real-world videos for generating new characters while optimally preserving their original poses and scenes.
-              It significantly outperforms previous approaches.
+              Text-to-Image (T2I) diffusion models have achieved remarkable success in synthesizing high-quality images conditioned on text prompts. Recent methods have
+tried to replicate the success by either training text-to-video (T2V) models on a
+very large number of text-video pairs or adapting T2I models on text-video pairs
+independently. Although the latter is computationally less expensive, it still takes a
+significant amount of time for per-video adaption. To address this issue, we propose
+SAVE, a novel spectral-shift-aware adaptation framework, in which we fine-tune
+the spectral shift of the parameter space instead of the parameters themselves.
+Specifically, we take the spectral decomposition of the pre-trained T2I weights and
+only control the change in the corresponding singular values, i.e. spectral shift,
+while freezing the corresponding singular vectors. To avoid drastic drift from the
+original T2I weights, we introduce a spectral shift regularizer that confines the spectral shift to be more restricted for large singular values and more relaxed for small
+singular values. Since we are only dealing with spectral shifts, the proposed method
+reduces the adaptation time significantly (∼ 10×) and has fewer resource constraints for training. Such attributes posit SAVE to be more suitable for real-world
+applications, e.g. editing undesirable contents during video streaming. We validate
+the effectiveness of SAVE with an extensive experimental evaluation under different
+settings, e.g. style transfer, object replacement, privacy preservation, etc. Code is
+available at https://github.com/nazmul-karim170/SAVE-Tex2Video.
             </p>
           </div>
         </div>
@@ -226,45 +211,47 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body has-text-justified">
-        <img class="center-img" src="./assets/method.png" width="80%" />
-        <h2 class="subtitle">
-          We optimize one shared unconditional embedding for the reconstruct branch (orange).
-          The initialized unconditional embedding is utilized for the editable branch (green).
-          Their attention maps are incorporated to create the target video.
-        </h2>
+        <img class="center-img" src="./assets/nips_main.png" width="80%" />
+<!--        <h2 class="subtitle">-->
+<!--          We optimize one shared unconditional embedding for the reconstruct branch (orange).-->
+<!--          The initialized unconditional embedding is utilized for the editable branch (green).-->
+<!--          Their attention maps are incorporated to create the target video.-->
+<!--        </h2>-->
       </div>
     </div>
-  </section>
+<!--  </section>-->
 
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body has-text-justified">
-        <img class="center-img" src="./assets/prompts/car-night2.png" width="70%"/>
-        <img src="./assets/car-night.gif" width="100%" />
-        <!-- <h2 class="subtitle">
-          The extent increases from left to right.
-        </h2> -->
-      </div>
-    </div>
-  </section>
+<!--  <section class="hero teaser">-->
+<!--    <div class="container is-max-desktop">-->
+<!--      <div class="hero-body has-text-justified">-->
+<!--        <img class="center-img" src="./assets/prompts/car-night2.png" width="70%"/>-->
+<!--        <img src="./assets/car-night.gif" width="100%" />-->
+<!--        &lt;!&ndash; <h2 class="subtitle">-->
+<!--          The extent increases from left to right.-->
+<!--        </h2> &ndash;&gt;-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body has-text-justified">
-        <img class="center-img" src="./assets/prompts/style.png" width="70%"/>
-        <img src="./assets/style.gif" width="100%" />
-      </div>
-    </div>
-  </section>
+<!--  <section class="hero teaser">-->
+<!--    <div class="container is-max-desktop">-->
+<!--      <div class="hero-body has-text-justified">-->
+<!--        <img class="center-img" src="./assets/prompts/style.png" width="70%"/>-->
+<!--        <img src="./assets/style.gif" width="100%" />-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{liu2023videop2p,
-  author    = {Liu, Shaoteng and Zhang, Yuechen and Li, Wenbo and Lin, Zhe and Jia, Jiaya},
-  title     = {Video-P2P: Video Editing with Cross-attention Control},
-  journal   = {arXiv:2303.04761},
-  year      = {2023},
+      <pre><code>@misc{karim2023save,
+      title={SAVE: Spectral-Shift-Aware Adaptation of Image Diffusion Models for Text-guided Video Editing},
+      author={Nazmul Karim and Umar Khalid and Mohsen Joneidi and Chen Chen and Nazanin Rahnavard},
+      year={2023},
+      eprint={2305.18670},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }</code></pre>
     </div>
   </section>

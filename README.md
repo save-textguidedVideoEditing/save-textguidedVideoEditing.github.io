@@ -1,4 +1,4 @@
-# Video-P2P.github.io
-[Homepage](https://video-p2p.github.io/) for ***Video-P2P: Video Editing with Cross-attention Control***.
+# [save-textguidedvideoediting.github.io]
+[Homepage](https://save-textguidedvideoediting.github.io/) for ***SAVE: Spectral-Shift-Aware Adaptation of Image Diffusion Models for Text-guided Video Editing***.
 
-![image](./assets/teaser.png)
+![image](./assets/lion_1.png)
